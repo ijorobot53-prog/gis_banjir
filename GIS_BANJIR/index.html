@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistem Informasi Geografis pemetaan kawasan rawan banjir, jalur evakuasi, dan titik aman bagi warga Kota Medan.">
+    <title>SIG Rawan Banjir Kota Medan - BPBD</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <!-- AOS animasi -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS custom aplikasi -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ================================================================
+         HERO SECTION
+         ================================================================ -->
+    <section class="hero-section">
+        <div class="container position-relative" data-aos="fade-up">
+            <div class="row align-items-center">
+                <div class="col-lg-7 col-md-8 text-center text-md-start">
+
+                    <div class="hero-badge" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa-solid fa-shield-halved me-1"></i>
+                        BPBD Kota Medan
+                    </div>
+
+                    <h1 class="mb-3" data-aos="fade-up" data-aos-delay="200">
+                        SIG Rawan Banjir<br>
+                        <span class="text-gradient-blue">Kota Medan</span>
+                    </h1>
+
+                    <p class="lead mb-4" data-aos="fade-up" data-aos-delay="300">
+                        Sistem Informasi Geografis untuk pemetaan kawasan rawan banjir,
+                        jalur evakuasi, dan titik aman bagi warga Kota Medan.
+                    </p>
+
+                    <div class="d-flex gap-2 flex-wrap justify-content-center justify-content-md-start"
+                         data-aos="fade-up" data-aos-delay="400">
+                        <a href="peta.php" class="btn btn-light btn-lg px-4">
+                            <i class="fa-solid fa-map-location-dot me-2"></i>
+                            Lihat Peta Rawan
+                        </a>
+                        <a href="evakuasi.php" class="btn btn-outline-light btn-lg px-4">
+                            <i class="fa-solid fa-route me-2"></i>
+                            Jalur Evakuasi
+                        </a>
+                    </div>
+
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+
+        <div class="hero-floating-icon">
+            <i class="fa-solid fa-water"></i>
+        </div>
+    </section>
+
+    <!-- ================================================================
+         STATISTIK COUNTER SECTION
+         ================================================================ -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="stat-card stat-kecamatan">
+                        <div class="stat-icon bg-primary bg-opacity-10 text-primary">
+                            <i class="fa-solid fa-map"></i>
+                        </div>
+                        <span class="stat-number counter-animate" data-target="0">0</span>
+                        <div class="stat-label">Kecamatan Rawan</div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-card stat-titik">
+                        <div class="stat-icon bg-danger bg-opacity-10 text-danger">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <span class="stat-number counter-animate" data-target="0">0</span>
+                        <div class="stat-label">Titik Banjir</div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-card stat-posko">
+                        <div class="stat-icon bg-success bg-opacity-10 text-success">
+                            <i class="fa-solid fa-house-flag"></i>
+                        </div>
+                        <span class="stat-number counter-animate" data-target="0">0</span>
+                        <div class="stat-label">Posko Evakuasi</div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-card stat-korban">
+                        <div class="stat-icon bg-warning bg-opacity-10 text-warning">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <span class="stat-number counter-animate" data-target="0">0</span>
+                        <div class="stat-label">Total Korban Terdampak</div>
+                    </div>
+                </div>
+
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+
+    <!-- ================================================================
+         KEJADIAN BANJIR TERBARU
+         ================================================================ -->
+    <section class="py-5 bg-body-secondary">
+        <div class="container">
+            <div class="section-heading" data-aos="fade-up">
+                <div class="section-label">Pemantauan</div>
+                <h2>Kejadian Banjir Terbaru</h2>
+                <p>Data kejadian banjir akan ditampilkan dari sistem.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-12">
+                    <div class="alert alert-info text-center" role="alert">
+                        <i class="fa-solid fa-circle-info me-2"></i>
+                        Belum ada data kejadian banjir terbaru.
+                    </div>
+                </div>
+            </div><!-- /.row -->
+
+            <div class="text-center mt-4" data-aos="fade-up">
+                <a href="statistik.php" class="btn btn-outline-primary">
+                    <i class="fa-solid fa-chart-bar me-2"></i>
+                    Lihat Statistik Lengkap
+                </a>
+            </div>
+        </div><!-- /.container -->
+    </section>
+
+    <!-- ================================================================
+         BERITA / PENGUMUMAN TERBARU
+         ================================================================ -->
+    <section class="py-5">
+        <div class="container">
+            <div class="section-heading" data-aos="fade-up">
+                <div class="section-label">Informasi</div>
+                <h2>Berita &amp; Pengumuman</h2>
+                <p>Berita terkini dan informasi penting dari BPBD Kota Medan.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-12">
+                    <div class="alert alert-info text-center" role="alert">
+                        <i class="fa-solid fa-circle-info me-2"></i>
+                        Belum ada berita atau pengumuman.
+                    </div>
+                </div>
+            </div><!-- /.row -->
+
+            <div class="text-center mt-4" data-aos="fade-up">
+                <a href="edukasi.php" class="btn btn-outline-primary">
+                    <i class="fa-solid fa-book-open me-2"></i>
+                    Lihat Semua Berita &amp; Edukasi
+                </a>
+            </div>
+        </div><!-- /.container -->
+    </section>
+
+    <!-- ================================================================
+         CTA SECTION: LAPOR BANJIR
+         ================================================================ -->
+    <section class="cta-section" data-aos="fade-up">
+        <div class="container position-relative">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-7">
+                    <h2 class="mb-3 fw-bold">
+                        <i class="fa-solid fa-megaphone me-2"></i>
+                        Lihat Banjir di Sekitar Anda?
+                    </h2>
+                    <p class="lead mb-4">
+                        Laporkan segera kepada kami agar tim BPBD dapat segera memberikan bantuan.
+                        Setiap laporan warga sangat membantu respon cepat kami.
+                    </p>
+                    <a href="laporan.php" class="btn btn-light btn-lg px-5">
+                        <i class="fa-solid fa-file-circle-plus me-2"></i>
+                        Lapor Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+         SCRIPTS
+         ================================================================ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="assets/js/main.js" defer></script>
+    <script>
+    /**
+     * Animasi counter untuk stat number
+     * Menganimasikan angka dari 0 ke target (diisi dari data-target)
+     */
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({ duration: 800, once: true });
+
+        const counters = document.querySelectorAll('.stat-number.counter-animate');
+
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'), 10) || 0;
+            const duration = 1500;
+            const increment = target / (duration / 16);
+            let current = 0;
+
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    counter.textContent = Math.ceil(current).toLocaleString('id-ID');
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target.toLocaleString('id-ID');
+                }
+            };
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        updateCounter();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(counter);
+        });
+    });
+    </script>
+</body>
+</html>
